@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const path = require('path');
 
 
@@ -11,6 +12,7 @@ module.exports = {
   output: {    // المكان الذي سوف يتم وضع الملفات المخرجة فيه
     filename: 'js/index.js',
     path: path.resolve(__dirname, 'bulid'),
+    publicPath: './',
   },
 
 
@@ -113,6 +115,17 @@ module.exports = {
       template: './src/index.html',   // الملف الذي سوف يعمل عليه
       filename: 'index.html'    // اسم الملف عتدما يكون جاهز
     }),
+    new HtmlWebpackPlugin({
+      template: './src/project.html',   // الملف الذي سوف يعمل عليه
+      filename: 'project.html'    // اسم الملف عتدما يكون جاهز
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/project-details.html',   // الملف الذي سوف يعمل عليه
+      filename: 'project-details.html'    // اسم الملف عتدما يكون جاهز
+    }),
     new MiniCssExtractPlugin(),
+    new CleanWebpackPlugin(),  // لأيقاف توليد الملفات
+    
+    
   ],
 };

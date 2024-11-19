@@ -1,0 +1,90 @@
+@use './_variable.scss' as *;
+
+.banner{
+    #banner-img{
+        position: relative;
+        img{
+            background-size: cover;
+            width: 100%;
+            height: 450px;
+        }
+        .overlay{
+            position: absolute;
+            background-color: rgb(65, 155, 155 , 0.5);
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            display: flex !important;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+        .title{
+            color: white;
+            font-weight: bold;
+        }
+    }
+}
+
+.our-works{
+    .custom-btn-2{
+        color: #363636;
+        background-color: white;
+        border: none;
+        border-radius: 1px;
+        font-weight: bold;
+        position: absolute;
+        right: 25px;
+        top: 20px;
+
+        &:hover,
+        &:focus{
+            color: white;
+            background-color: $main-color;
+            border: none;
+        }
+    }
+}
+
+.btn, button {
+    &:focus, 
+    &:active {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+}
+  
+#image-gallery {
+    .modal-footer {
+        display: block;
+    }
+}
+  
+.thumb {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.project-details {
+    .card {
+        .card-body {
+            .card-title {
+                font-weight: 800;
+                color: $main-color;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .project-details {  
+        .thumb {
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+    }
+}
+
+

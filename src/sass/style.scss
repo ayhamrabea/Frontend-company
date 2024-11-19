@@ -1,5 +1,5 @@
-$main-color: #ff7766;
-$custom-color: #eee;
+@use "./project.scss";
+@use './_variable.scss' as *;
 
 @font-face {
     font-family: "cairofont";
