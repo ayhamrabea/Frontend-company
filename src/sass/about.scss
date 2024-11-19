@@ -1,0 +1,19 @@
+@use './_variable.scss' as *;
+
+.our-team{
+    .our-team-line{
+        border-top-color: $main-color;
+        width: 10%;
+    }
+    .card-text{
+        font-size: 14px;
+        font-weight: 600;
+        margin: 14px 0px;
+        color: $card-text-color;
+    }
+}
+
+.social-about{
+    margin-left: 18%;
+    margin-top: 15px;
+}

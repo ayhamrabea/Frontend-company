@@ -1,5 +1,8 @@
 @use "./project.scss";
 @use './_variable.scss' as *;
+@use './blog.scss';
+@use './about.scss';
+@use './contact.scss';
 
 @font-face {
     font-family: "cairofont";
@@ -38,6 +41,10 @@
                 background-color: $custom-color;
                 border-bottom: 1px solid $main-color;
             }
+        }
+        .active a{
+            color: $main-color !important;
+            border-bottom: 1px solid $main-color;
         }
     }
 }
